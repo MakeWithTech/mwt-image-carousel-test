@@ -1,14 +1,22 @@
+<!-- need to look at these examples
+
+https://codepen.io/kasia123/pen/xxEmgmG
+
+https://kasia.website/index.php/2021/01/15/responsive-vuetify-carousel-with-multiple-items-per-slide/
+
+-->
+
 <template>
   <v-container>
     <v-row justify="center">
       <v-spacer />
       <v-col col="4">
-        <v-card flat max-width="600">
+        <v-card flat max-width="600" class="justify-center">
         <v-carousel height="580">
           <v-carousel-item v-for="myModel in featuredModels" :key="myModel.id">
             <v-card flat height="550">
-              <v-card-title class="text-center">{{ myModel.id }}</v-card-title>
-              <v-card-text class="text-center">
+              <v-card-title class="justify-center">{{ myModel.id }}</v-card-title>
+              <v-card-text class="justify-center">
                 <v-img
                   :src="myModel.url"
                   contain
@@ -16,7 +24,7 @@
                 >
                 </v-img>
               </v-card-text>
-              <v-card-actions class="text-center">
+              <v-card-actions class="justify-center">
                 {{ myModel.author }}
               </v-card-actions>
             </v-card>
