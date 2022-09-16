@@ -1,27 +1,28 @@
 <template>
   <v-container>
-    <v-row justify="space-around">
+    <v-row justify="center">
       <v-spacer />
-      <v-col col="6">
-        <v-carousel>
+      <v-col col="4">
+        <v-card flat max-width="600">
+        <v-carousel height="580">
           <v-carousel-item v-for="myModel in featuredModels" :key="myModel.id">
-            <v-card>
-              <v-card-title>{{ myModel.id }}</v-card-title>
-              <v-card-text>
+            <v-card flat height="550">
+              <v-card-title class="text-center">{{ myModel.id }}</v-card-title>
+              <v-card-text class="text-center">
                 <v-img
                   :src="myModel.url"
-                  aspect="1"
-                  max-height="250"
-                  max-width="500"
+                  contain
+                  max-height="400"
                 >
                 </v-img>
               </v-card-text>
-              <v-card-actions>
+              <v-card-actions class="text-center">
                 {{ myModel.author }}
               </v-card-actions>
             </v-card>
           </v-carousel-item>
         </v-carousel>
+        </v-card>
       </v-col>
       <v-spacer />
     </v-row>
